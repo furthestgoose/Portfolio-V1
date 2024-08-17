@@ -1,0 +1,365 @@
+       /* Existing styles */
+       html {
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
+    body {
+        font-family: Inter, sans-serif;
+        margin: 0;
+        overflow: hidden;
+        background-color: #1B2452; /* Base background color */
+        transition: background 0.1s ease; /* Smooth transition for background change */
+        position: relative; /* For absolute positioning of light effect */
+        height: 100vh; /* Ensure the body takes full viewport height */
+        overflow-x: hidden;
+    }
+    #page-wrap {
+        display: flex;
+        width: 100%;
+        height: 100vh; /* Ensure full viewport height */
+    }
+    #Left-column {
+        background-color: #1B2452;
+        width: 50%;
+        height: 100vh;
+        padding: 20px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center content horizontally */
+        color: white;
+    }
+    #Left-column h2 {
+        color: white;
+        text-align: center;
+    }
+    .name {
+        font-size: 3.5em;
+        font-weight: bold;
+        margin-top: 20px; /* Add space from the top */
+        color: white;
+    }
+     .title {
+        font-size: 1.2em;
+        margin-bottom: 50px;
+        margin-left: -100px;
+        color: white;
+    }
+    .nav a {
+position: relative;
+padding-left: 20px;
+display: block;
+text-decoration: none;
+color: white;
+margin-bottom: 10px;
+transition: color 0.3s ease;
+}
+
+.nav a::before {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0; /* Position the indicator bar at the bottom */
+width: 0;
+height: 2px;
+background-color: #3498db; /* Color of the indicator bar */
+transition: width 0.3s ease;
+}
+
+.nav a.active::before {
+width: 10px; /* Width of the active indicator bar */
+}
+
+.nav a:hover {
+color: #3498db; /* Hover color for links */
+}
+
+    .social-links {
+        margin-top: auto; /* Push social links to the bottom */
+        display: flex; /* Align social links horizontally */
+        justify-content: center; /* Center social links horizontally */
+        width: 100%; /* Ensure social links take full width */
+    }
+    .social-links a {
+        color: white;
+        margin: 0 10px;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+    #about p {
+        color: white;
+    }
+    #about{
+        margin-bottom: 100px;
+    }
+    #Right-column {
+        background-color: #1B2452;
+        width: 50%;
+        height: 100vh;
+        overflow: auto;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .CV_Link {
+        color: grey;
+        display: block;
+        margin-top: 20px;
+        text-align: left;
+        text-decoration: none;
+        display: none;
+    }
+    #Right-column a:hover {
+        color: white;
+    }
+    .projects-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 1000px;
+        margin: 0 auto;
+        margin-top: 60px;
+    }
+    .project {
+        margin-bottom: 60px;
+        cursor: pointer;
+        padding: 20px;
+        border-radius: 8px;
+        background-color: transparent;
+        color: white;
+        width: 100%;
+        max-width: 800px;
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+        font-size: 1.2em;
+        position: relative; /* Ensure pseudo-elements can be positioned */
+    }
+    /* Hover effect */
+    .project:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Light background color */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+        transform: translateY(-5px); /* Slight lift effect */
+    }
+    .project-date {
+        display: block;
+        font-size: 0.9em;
+        color: #b0bec5;
+        margin-bottom: 10px;
+    }
+    .project h2 {
+        margin: 0;
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    .project-details {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out; /* Smooth transition */
+        font-size: 1em;
+        line-height: 1.6;
+        color: #e0e0e0;
+    }
+    .project-details.open {
+        max-height: 500px; /* Adjust based on the content size */
+    }
+    .tags {
+        margin-top: 10px;
+    }
+    .tag {
+        display: inline-block;
+        background-color: #3498db;
+        color: white;
+        padding: 3px 10px;
+        margin: 0 5px 5px 0;
+        border-radius: 15px;
+        font-size: 0.8em;
+    }
+    .project a {
+        display: inline-block;
+        margin-top: 10px;
+        color: #3498db;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    .light-effect {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none; /* Ensure it does not block mouse events */
+        background: radial-gradient(circle, rgba(42, 58, 127, 0.2) 0%, rgba(42, 58, 127, 0) 50%);
+        transition: background 0.1s ease;
+        z-index: 1; /* Ensure it is above other content */
+    }
+    .social-links {
+        margin-top: auto; /* Push social links to the bottom */
+        display: flex; /* Align social links horizontally */
+        justify-content: center; /* Center social links horizontally */
+        width: 100%; /* Ensure social links take full width */
+        margin-bottom: 20%;
+    }
+    .social-links a {
+        color: #a2a6a3;
+        margin: 0 15px; /* Add spacing between icons */
+        font-size: 1.5em; /* Adjust size as needed */
+        text-decoration: none;
+        transition: color 0.3s ease; /* Smooth color transition */
+    }
+    .social-links a:hover {
+        color: #FFFFFF; /* Change color on hover */
+    }
+
+    .cv-item {
+margin-bottom: 40px;
+cursor: pointer;
+padding: 20px;
+border-radius: 8px;
+background-color: transparent;
+color: white;
+width: 100%;
+max-width: 800px;
+transition: all 0.3s ease;
+font-size: 1.2em;
+position: relative;
+}
+
+/* Hover effect */
+.cv-item:hover {
+background-color: rgba(255, 255, 255, 0.1);
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+transform: translateY(-5px);
+}
+
+.cv-dates {
+font-size: 0.9em;
+color: #b0bec5;
+margin-bottom: 10px;
+}
+
+.cv-company {
+    font-size: 1em; /* Adjust as needed */
+    color: #a0a0a0; /* Light color for contrast */
+    margin-bottom: 10px;
+}
+
+.cv-details {
+max-height: 0;
+overflow: hidden;
+transition: max-height 0.3s ease-out;
+font-size: 1em;
+line-height: 1.6;
+color: #e0e0e0;
+}
+
+.cv-details.open {
+max-height: 500px;
+}
+.footer {
+color: white;
+text-align: center;
+margin-top: 50px; /* Space above the footer */
+padding: 20px;
+background-color: #1B2452; /* Consistent background color */
+position: relative; /* Ensure it is positioned correctly */
+display: block; /* Ensure it's displayed as a block-level element */
+}
+
+.footer p {
+margin: 0; /* Remove default margin to keep the paragraph together */
+font-size: 1em; /* Adjust font size if necessary */
+}
+
+.footer a {
+color: turquoise; /* Link color */
+text-decoration:solid;
+}
+
+.footer a:hover {
+color: green;
+}
+
+#mobile_header {
+display: none;
+}
+
+.mobile_about_header, .mobile_cv_header, .mobile_projects_header {
+color: white;
+text-decoration: solid;
+display: none;
+}
+
+.red-shell-cursor {
+    cursor: url(https://www.iconninja.com/files/103/645/148/red-shell-icon.png), auto; /* URL to your red shell image */
+}
+
+.red-shell-highlight {
+    transition: color 0.3s ease; /* Smooth transition for color change */
+}
+
+.red-shell-highlight:hover {
+    color: red; /* Highlight text in red on hover */
+}
+
+.red-shell{
+    color: gray;
+}
+
+@media (max-width: 768px) {
+#mobile_header {
+    display: block;
+}
+#Left-column {
+    display: none;
+}
+
+#Right-column {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: block; /* Ensure it is displayed */
+}
+
+.mobile_about_header, .mobile_cv_header, .mobile_projects_header {
+    display: block;
+}
+
+.nav {
+    display: none; /* Hide the nav links on small screens */
+}
+
+.name, .title {
+    text-align: center; /* Center align name and title */
+}
+
+.social-links {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    justify-content: center; /* Center social links */
+}
+
+.social-links a {
+    margin: 0 10px;
+}
+/* Disable the light effect on mobile */
+.light-effect {
+    display: none;
+}
+.red-shell-highlight {
+    cursor: default; /* Ensure no custom cursor is used on mobile */
+}
+.red-shell {
+    color: white; /* Remove underline on mobile */
+}
+.project:hover{
+    background-color: transparent; /* Remove hover background color */
+    box-shadow: none; /* Remove hover shadow */
+    transform: none; /* Remove hover lift effect */
+}
+.cv-item:hover {
+    background-color: transparent;
+    box-shadow: none;
+    transform: none;
+}
+
+}
+
