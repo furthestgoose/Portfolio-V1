@@ -109,7 +109,7 @@ function initCV() {
             title: "Student",
             company: "University of Leicester",
             dateRange: "20/09/2023 - Present",
-            description: "I am currently studying as a second year student at the university of leicester, my first year covered a variety of topics including the usage of git, revising basics of programming through python, learning OOP through java and further improving upon my website development skills.",
+            description: "I am currently studying software engineering as a second year student at the university of Leicester, my first year covered a variety of topics including the usage of git, revising basics of programming through python, learning OOP through java and further improving upon my website development skills.",
         },
         {
             id: 2,
@@ -148,8 +148,29 @@ function initCV() {
     });
 }
 
+function initScrollSync() {
+    const leftColumn = document.getElementById('Left-column');
+    const rightColumn = document.getElementById('Right-column');
+    let isScrolling = false;
+
+    leftColumn.addEventListener('wheel', (event) => {
+        event.preventDefault();
+        if (!isScrolling) {
+            isScrolling = true;
+            const scrollAmount = event.deltaY;
+            rightColumn.scrollTop += scrollAmount;
+            
+            requestAnimationFrame(() => {
+                isScrolling = false;
+            });
+        }
+    });
+    
+}
+
 initProjects();
 initCV();
+initScrollSync();
 
 // Mouse move effect for background
 document.addEventListener('mousemove', (event) => {
