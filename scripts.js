@@ -3,7 +3,7 @@ function initProjects() {
     {id: 1,
                 title: "Financial Tracker",
                 date: "Present",
-                tags: ["React", "JavaScript", "Firebase"],
+                tags: ["React", "TypeScript","API Integration","Tailwind CSS", "Firebase"],
                 description: "I'm currently developing a financial tracker in react, you can check out the progress in the link below.",
                 releaseLink: "https://github.com/furthestgoose/financial-tracker"
             },
