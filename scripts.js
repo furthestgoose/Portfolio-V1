@@ -2,10 +2,10 @@ function initProjects() {
     const projects = [
     {id: 1,
                 title: "Financial Tracker",
-                date: "Present",
+                date: "2024-08-31",
                 tags: ["React", "TypeScript","API Integration","Tailwind CSS", "Firebase"],
-                description: "I'm currently developing a financial tracker in react, you can check out the progress in the link below.",
-                releaseLink: "https://github.com/furthestgoose/financial-tracker"
+                description: "Developed a in typescript using react, firebase and tailwind to enable trackintg of the users financial health via logging income,expenses and investments. Real time price of the investments is shown via API Integration.",
+                releaseLink: "https://furthestgoose.github.io/financial-tracker/"
             },
             {
                 id: 2,
