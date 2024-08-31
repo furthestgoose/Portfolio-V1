@@ -4,7 +4,7 @@ function initProjects() {
                 title: "Financial Tracker",
                 date: "2024-08-31",
                 tags: ["React", "TypeScript","API Integration","Tailwind CSS", "Firebase"],
-                description: "Developed a in typescript using react, firebase and tailwind to enable trackintg of the users financial health via logging income,expenses and investments. Real time price of the investments is shown via API Integration.",
+                description: "Developed a financial tracker web app in typescript using react, firebase and tailwind to enable tracking of the users financial health via logging income,expenses and investments. Real time price of the investments is shown via API Integration.",
                 releaseLink: "https://furthestgoose.github.io/financial-tracker/"
             },
             {
