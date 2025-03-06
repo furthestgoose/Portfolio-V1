@@ -1,12 +1,19 @@
 function initProjects() {
     const projects = [
         {id: 1,
+             title: "Journal app",
+             date: "2025-06-03",
+             tags: ["JavaScript","HTML","CSS","SQLite 3", "Electron", "Pixel Studio", "Figma"],
+             description: "Designed a Journal app in figma and developed it using Electron and SQLite 3. Pixel art elements hand drawn in Pixel Studio. User can write,view, update and delete entries as well as being able to export all entries to a text file and mass delete entries.",
+             releaseLink: "https://furthestgoose.github.io/Journal-app/",
+        },
+        {id: 2,
              title: "Keyboard E-shop",
              date: "2025-25-01",
              tags: ["Next.js", "React", "Tailwind CSS", "TypeScript", "API Integration", "Spring MVC", "MySQL"],
              description: "Developed a Keyboard E-shop in typescript using Next.js and Tailwind for the front end, the user is able to browse products and add them to their cart but there is no payment API implemented. Fetching products was implemented using api calls to a custom Spring MVC program which fetched product details from a MySQL database.",
              releaseLink: "https://furthestgoose.github.io/tailored_type/"},
-    {id: 2,
+    {id: 3,
                 title: "Financial Tracker",
                 date: "2024-08-31",
                 tags: ["React", "TypeScript","API Integration","Tailwind CSS", "Firebase"],
@@ -14,14 +21,14 @@ function initProjects() {
                 releaseLink: "https://furthestgoose.github.io/financial-tracker/"
             },
             {
-                id: 3,
+                id: 4,
                 title: "Portfolio Website V1",
                 date: "2024-08-17",
                 tags: ["JavaScript", "CSS", "HTML"],
                 description: "This is the first version of my portfolio website, showcasing my projects and skills and it's what you're on right now :)",
             },
             {
-                id: 4,
+                id: 5,
                 title: "IOS Incremental Game",
                 date: "2024-07-16",
                 tags: ["Swift", "SwiftUI", "Swift Data"],
@@ -29,7 +36,7 @@ function initProjects() {
                 releaseLink: "https://furthestgoose.github.io/Quantum-Clicker/"
             },
             {
-                id: 5,
+                id: 6,
                 title: "Media Based Matching App",
                 date: "2024-05-30",
                 tags: ["Swift", "SwiftUI", "Swift Data", "API Integration", "Firebase", "AdMob"],
@@ -37,7 +44,7 @@ function initProjects() {
                 releaseLink: "https://furthestgoose.github.io/Media-Match/"
             },
             {
-                id: 6,
+                id: 7,
                 title: "IOS To Do List App",
                 date: "2024-05-21",
                 tags: ["Swift", "SwiftUI", "Swift Data"],
@@ -45,7 +52,7 @@ function initProjects() {
                 releaseLink: "https://github.com/furthestgoose/To-Do-app"
             },
             {
-                id: 7,
+                id: 8,
                 title: "AI Storyteller",
                 date: "2024-05-11",
                 tags: ["HTML","CSS","JavaScript", "Transformers.js", "GSAP"],
@@ -53,7 +60,7 @@ function initProjects() {
                 releaseLink: "https://furthestgoose.github.io/InkForge/"
             },
             {
-                id: 8,
+                id: 9,
                 title: "Discord Economy Bot",
                 date: "2024-05-06",
                 tags: ["Python","SQLite","Discord.py"],
@@ -61,7 +68,7 @@ function initProjects() {
                 releaseLink: "https://furthestgoose.github.io/Economy-Bot/"
             },
             {
-                id: 9,
+                id: 10,
                 title: "Dart Weather CLI App",
                 date: "2024-04-07",
                 tags: ["Dart", "API Integration", "Oranda"],
@@ -69,7 +76,7 @@ function initProjects() {
                 releaseLink: "https://furthestgoose.github.io/Weather-CLI-App/"
             },
             {
-                id: 10,
+                id: 11,
                 title: "Pokemon Guessing Game",
                 date: "2024-02-25",
                 tags: ["HTML","CSS","JavaScript","API Integration","Electron","Oranda"],
